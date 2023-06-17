@@ -63,7 +63,6 @@
             transform: translateY(20px);
             animation-duration: 1s;
             animation-fill-mode: both;
-            animation-name: fadeIn;
         }
 
         @keyframes fadeIn {
@@ -80,18 +79,10 @@
         h2 {
             color: #66ccff;
             margin: 0 0 10px 0;
-            opacity: 0;
-            animation-duration: 1s;
-            animation-fill-mode: both;
-            animation-name: fadeIn;
         }
 
         p {
             color: #fff;
-            opacity: 0;
-            animation-duration: 1s;
-            animation-fill-mode: both;
-            animation-name: fadeIn;
         }
 
         footer {
@@ -101,6 +92,12 @@
             color: #fff;
         }
     </style>
+    <script>
+        function startAnimation(sectionId) {
+            var section = document.getElementById(sectionId);
+            section.classList.add("fadeInAnimation");
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -117,9 +114,9 @@
     </header>
 
     <main>
-        <section id="aboutMeSection">
+        <section id="aboutMeSection" onclick="startAnimation('aboutMeSection')">
             <h2>About Me</h2>
             <p>Hello, I'm John Doe. I am a passionate web developer with experience in HTML, CSS, and JavaScript. I love creating visually appealing and user-friendly websites. I enjoy learning new technologies and keeping up with the latest trends in web development. In my free time, I like to work on personal coding projects and explore new design concepts. Feel free to contact me for any web development opportunities.</p>
         </section>
 
-        <section id="projectsSection">
+        <section id="projectsSection" onclick="startAnimation('projectsSection
