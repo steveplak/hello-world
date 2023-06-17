@@ -58,19 +58,6 @@
             border: 1px solid #66ccff;
             border-radius: 5px;
             text-align: center;
-            opacity: 0;
-            animation: fadeIn 1s forwards;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
         }
 
         h2 {
@@ -89,24 +76,6 @@
             color: #fff;
         }
     </style>
-    <script>
-        // JavaScript for scroll animations
-        window.addEventListener('scroll', reveal);
-
-        function reveal() {
-            var reveals = document.querySelectorAll('.section:not(.visible)');
-
-            for (var i = 0; i < reveals.length; i++) {
-                var windowHeight = window.innerHeight;
-                var revealTop = reveals[i].getBoundingClientRect().top;
-                var revealPoint = 150;
-
-                if (revealTop < windowHeight - revealPoint) {
-                    reveals[i].classList.add('visible');
-                }
-            }
-        }
-    </script>
 </head>
 <body>
     <header>
@@ -123,6 +92,28 @@
     </header>
 
     <main>
-        <section id="about" class="section">
+        <section id="about">
             <h2>About Me</h2>
-            <p>Hello, I'm John Doe. I am a passionate web developer with experience in HTML, CSS, and JavaScript. I love creating visually appealing and user-friendly websites. I enjoy learning new technologies and keeping up with the latest trends in web development. In my free time, I
+            <p>Hello, I'm John Doe. I am a passionate web developer with experience in HTML, CSS, and JavaScript. I love creating visually appealing and user-friendly websites. I enjoy learning new technologies and keeping up with the latest trends in web development. In my free time, I like to work on personal coding projects and explore new design concepts. Feel free to contact me for any web development opportunities.</p>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <p>Here are some of the projects I've worked on:</p>
+            <!-- Add your project details here -->
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <p>My educational background:</p>
+            <!-- Add your education details here -->
+        </section>
+
+        <section id="work">
+            <h2>Work Experience</h2>
+            <p>My work experience:</p>
+            <!-- Add your work experience details here -->
+        </section>
+    </main>
+</body>
+</html>
